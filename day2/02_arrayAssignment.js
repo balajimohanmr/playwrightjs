@@ -75,11 +75,10 @@ function maximumandMinimum(nums){
 
 } 
 
-//Solution 4:
-
 nums = [34, 7, 21, 89, 54, 10, 91, 67]
 maximumandMinimum(nums)
 
+//Solution 4:
 
 function removeDuplicates(arr){
     console.log(arr.filter((i,index,self)=>self.indexOf(i)===index))
