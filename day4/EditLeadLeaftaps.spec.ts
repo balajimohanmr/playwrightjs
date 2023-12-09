@@ -1,10 +1,12 @@
 import {chromium, test} from "@playwright/test"
 test("Create a new lead",async()=>{
+    test.setTimeout(50000);
     const browser=await chromium.launch({headless:false,channel:'chrome'});
     const browserContext= await browser.newContext();
     const page= await browserContext.newPage();
     //Launching leaftaps and loggins in 
     await page.goto("http://leaftaps.com/opentaps/control/main");
+    await page.setViewportSize({width:1707,height:898});
     await page.locator("#username").fill("Demosalesmanager");
     await page.locator("#password").fill("crmsfa");
     await page.locator(".decorativeSubmit").click();
